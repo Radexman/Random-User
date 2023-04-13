@@ -6,4 +6,24 @@
     grid-column: 2 / 5;
     font-family: $font-secondary;
     padding: 1.2em 2em;
+
+    .post {
+        @include post;
+
+        &__title {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .7em;
+
+            img {
+                border-radius: $border-round;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 1rem;
+            }
+        }
+    }
 }

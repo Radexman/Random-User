@@ -12,7 +12,7 @@
     position: relative;
 
     .profile-picture {
-        border-radius: 50%;
+        border-radius: $border-round;
         position: absolute;
         top: -150px;
     }
