@@ -1,6 +1,9 @@
 // Styling For User Posts
 
+@import './variables';
+
 .main__user-posts {
     grid-column: 2 / 5;
-    background-color: rgb(131, 83, 24);
+    font-family: $font-secondary;
+    padding: 1.2em 2em;
 }

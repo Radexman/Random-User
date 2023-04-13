@@ -3,7 +3,7 @@
 
 .main__user-data {
     font-family: $font-primary;
-    background-color: aqua;
+    background-color: $clr-secondary;
     grid-column: 1 / 1;
     display: flex;
     flex-flow: column nowrap;
@@ -19,5 +19,6 @@
 
     .user-details {
         list-style-type: none;
+        line-height: 2;
     }
 }

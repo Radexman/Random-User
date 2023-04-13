@@ -1,5 +1,14 @@
 // Typography
 $font-primary: 'Lato', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
 
 // Colors
 $clr-txt: #1a1616;
+$clr-primary: #ffffff;
+$clr-secondary: #e9e0e0;
+$clr-black: #000000;
+
+// Classes
+.bold {
+    font-weight: 700;
+}

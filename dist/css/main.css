@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+.bold {
+  font-weight: 700;
+}
+
 body {
   min-height: 100vh;
-  background-color: #e9e0e0;
+  background-color: #ffffff;
   color: #1a1616;
 }
 
@@ -11,10 +16,18 @@ body {
   min-height: 70vh;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .header {
   min-height: 30vh;
   background-image: url(../../dist/assets/images/background-1.jpg);
   background-position: center;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 @media screen and (max-width: 700px) {
@@ -23,9 +36,13 @@ body {
     flex-flow: column nowrap;
   }
 }
+.bold {
+  font-weight: 700;
+}
+
 .main__user-data {
   font-family: "Lato", sans-serif;
-  background-color: aqua;
+  background-color: #e9e0e0;
   grid-column: 1/1;
   display: flex;
   flex-flow: column nowrap;
@@ -40,11 +57,21 @@ body {
 }
 .main__user-data .user-details {
   list-style-type: none;
+  line-height: 2;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .main__user-posts {
   grid-column: 2/5;
-  background-color: rgb(131, 83, 24);
+  font-family: "Open Sans", sans-serif;
+  padding: 1.2em 2em;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 *,
