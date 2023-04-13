@@ -1,0 +1,14 @@
+// General Styling
+@import './variables';
+
+body {
+    min-height: 100vh;
+    background-color: #e9e0e0;
+    color: $clr-txt;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 70vh;
+}

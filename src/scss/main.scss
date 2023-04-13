@@ -1,12 +1,31 @@
 // Imports & Client Styles Reset
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
-* {
+@import './_general';
+@import './_header';
+@import './_media-querries';
+@import './_user-data';
+@import './_user-posts';
+@import './_variables';
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-    background-color: red;
+img, svg, picture, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, textarea, button, select {
+    font: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: dark light;
 }

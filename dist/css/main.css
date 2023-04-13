@@ -1,12 +1,72 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+body {
+  min-height: 100vh;
+  background-color: #e9e0e0;
+  color: #1a1616;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 70vh;
+}
+
+.header {
+  min-height: 30vh;
+  background-image: url(../../dist/assets/images/background-1.jpg);
+  background-position: center;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+.main__user-data {
+  font-family: "Lato", sans-serif;
+  background-color: aqua;
+  grid-column: 1/1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main__user-data .profile-picture {
+  border-radius: 50%;
+  position: absolute;
+  top: -150px;
+}
+.main__user-data .user-details {
+  list-style-type: none;
+}
+
+.main__user-posts {
+  grid-column: 2/5;
+  background-color: rgb(131, 83, 24);
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  background-color: red;
+img, svg, picture, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark light;
 }
 
 /*# sourceMappingURL=main.css.map */

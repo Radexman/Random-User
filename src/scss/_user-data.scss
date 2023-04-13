@@ -1,0 +1,23 @@
+// User's Profile Picture & Personal Data
+@import './variables';
+
+.main__user-data {
+    font-family: $font-primary;
+    background-color: aqua;
+    grid-column: 1 / 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .profile-picture {
+        border-radius: 50%;
+        position: absolute;
+        top: -150px;
+    }
+
+    .user-details {
+        list-style-type: none;
+    }
+}
