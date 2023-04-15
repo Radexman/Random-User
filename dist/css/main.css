@@ -35,6 +35,15 @@ body {
     display: flex;
     flex-flow: column nowrap;
   }
+  .main .main__user-data {
+    padding: 4em 0 1.5em;
+  }
+  .main .main__user-data .profile-picture {
+    top: -130px;
+  }
+  .main h1 {
+    text-align: center;
+  }
 }
 .bold {
   font-weight: 700;
@@ -53,7 +62,7 @@ body {
 .main__user-data .profile-picture {
   border-radius: 50%;
   position: absolute;
-  top: -150px;
+  top: -100px;
 }
 .main__user-data .user-details {
   list-style-type: none;
