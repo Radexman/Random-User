@@ -58,6 +58,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  font-size: 1.05rem;
 }
 .main__user-data .profile-picture {
   border-radius: 50%;
@@ -67,6 +68,12 @@ body {
 .main__user-data .user-details {
   list-style-type: none;
   line-height: 2;
+}
+.main__user-data .render-new-user {
+  cursor: pointer;
+  width: 80%;
+  margin-top: 3em;
+  padding: 5px 15px;
 }
 
 .bold {

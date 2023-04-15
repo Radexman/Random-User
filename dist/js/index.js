@@ -5,6 +5,8 @@ const userEmail = document.querySelector('.user-email');
 const userPhone = document.querySelector('.user-phone');
 const userLocation = document.querySelector('.user-location');
 const userWall = document.querySelector('.user-wall');
+const postAuthor = document.querySelectorAll('.post-author');
+const renderUserButton = document.querySelector('.render-new-user');
 
 const generateRandomUser = () => {
 	fetch('https://randomuser.me/api/')
@@ -33,6 +35,10 @@ const displayUserPosts = (user) => {
 	postsPicture.forEach((post) => {
 		post.src = user.picture.thumbnail;
 	});
+	postAuthor.forEach((title) => {
+		title.textContent = `${user.name.first} ${user.name.last}`;
+	});
 };
 
-generateRandomUser();
+window.addEventListener('DOMContentLoaded', generateRandomUser);
+renderUserButton.addEventListener('click', generateRandomUser);
