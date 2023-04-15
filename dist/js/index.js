@@ -7,6 +7,7 @@ const userLocation = document.querySelector('.user-location');
 const userWall = document.querySelector('.user-wall');
 const postAuthor = document.querySelectorAll('.post-author');
 const renderUserButton = document.querySelector('.render-new-user');
+const header = document.querySelector('.header');
 
 const generateRandomUser = () => {
 	fetch('https://randomuser.me/api/')
@@ -20,6 +21,7 @@ const generateRandomUser = () => {
 const renderUser = (user) => {
 	displayUserData(user);
 	displayUserPosts(user);
+	generateRandomBackgroundImage();
 };
 
 const displayUserData = (user) => {
@@ -38,6 +40,11 @@ const displayUserPosts = (user) => {
 	postAuthor.forEach((title) => {
 		title.textContent = `${user.name.first} ${user.name.last}`;
 	});
+};
+
+const generateRandomBackgroundImage = () => {
+	const randomIndex = Math.floor(Math.random() * 10 + 1);
+	header.style.backgroundImage = `url(../../dist/assets/images/background-${randomIndex}.jpg)`;
 };
 
 window.addEventListener('DOMContentLoaded', generateRandomUser);
