@@ -26,3 +26,8 @@ $border-round: 50%;
     background-color: $clr-secondary;
     padding: .5em;
 }
+
+@mixin button {
+    padding: 5px 15px;
+    cursor: pointer;
+}

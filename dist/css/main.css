@@ -121,6 +121,9 @@ body {
 .main__user-posts .create-post-button:active {
   background-color: #6ce96c;
 }
+.main__user-posts .new-post {
+  display: none;
+}
 .main__user-posts .post-form {
   font: inherit;
 }
@@ -129,6 +132,14 @@ body {
   background-color: #929292;
   color: #000;
   resize: none;
+}
+.main__user-posts .post-form .button-post {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.main__user-posts .post-form .button-cancel {
+  padding: 5px 15px;
+  cursor: pointer;
 }
 .main__user-posts .post {
   margin-block: 1em;

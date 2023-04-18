@@ -10,7 +10,11 @@ const renderUserButton = document.querySelector('.render-new-user');
 const header = document.querySelector('.header');
 const postBodyOne = document.querySelector('.post-one');
 const postBodyTwo = document.querySelector('.post-two');
-console.log(postBodyOne, postBodyTwo);
+const createPostButton = document.querySelector('.create-post-button');
+const newPost = document.querySelector('.new-post');
+const newPostInput = document.querySelector('#post-body');
+const postButton = document.querySelector('.button-post');
+const cancelButton = document.querySelector('.button-cancel');
 
 const generateRandomUser = () => {
 	fetch('https://randomuser.me/api/')
@@ -63,5 +67,36 @@ const generateRandomBackgroundImage = () => {
 	header.style.backgroundImage = `url(../../dist/assets/images/background-${randomIndex}.jpg)`;
 };
 
+const closePostWindow = (e) => {
+	e.preventDefault();
+	newPost.classList.add('new-post');
+};
+
+const createPost = (e) => {
+	newPost.classList.remove('new-post');
+};
+
+const post = (e) => {
+	if (!newPostInput.value) {
+		e.preventDefault();
+		alert('Please write post or cancel');
+	} else {
+		const newPost = document.createElement('div');
+		newPost.classList.add('post');
+		newPost.innerHTML = `<div class="post__title">
+						<img src="${user.picture.thumbnail}" alt="User's profile picture" width="50" class="post-picture" />
+						<h2 class="post-author"> ${user.name.first} ${user.name.last} </h2>
+					</div>
+					<div class="post__body post-one">
+						${newPostInput.value}
+					</div>`;
+	}
+
+	document.querySelector('.main__user-posts').appendChild(newPost);
+};
+
 window.addEventListener('DOMContentLoaded', generateRandomUser);
 renderUserButton.addEventListener('click', generateRandomUser);
+createPostButton.addEventListener('click', createPost);
+postButton.addEventListener('click', post);
+cancelButton.addEventListener('click', closePostWindow);
