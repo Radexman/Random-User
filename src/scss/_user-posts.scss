@@ -7,6 +7,40 @@
     font-family: $font-secondary;
     padding: 1.2em 2em;
 
+    .heading-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .create-post-button {
+        padding: 5px 15px;
+        cursor: pointer;
+        background-color: #093b09;
+        border: none;
+        border-radius: 3px;
+        transition: .2s ease-in;
+
+            &:hover {
+                background-color: #1a8a1a
+            }
+
+            &:active {
+                background-color: #6ce96c
+            }
+    }
+
+    .post-form {
+        font: inherit;
+
+        #post-body {
+            width: 100%;
+            background-color: #929292;
+            color: #000;
+            resize: none;
+        }
+    }
+
     .post {
         @include post;
 

@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/main.css" />
 		<script src="js/index.js" defer></script>
+		<script src="https://kit.fontawesome.com/6033bf0207.js" crossorigin="anonymous"></script>
 		<title>Random User</title>
 	</head>
 	<body>
@@ -22,7 +23,24 @@
 				<button class="render-new-user">Get New User</button>
 			</div>
 			<div class="main__user-posts">
-				<h1 class="user-wall">Radosław Siek Posts</h1>
+				<div class="heading-wrapper">
+					<h1 class="user-wall">Radosław Siek Posts</h1>
+					<button class="create-post-button">
+						<i class="fa-solid fa-plus"></i>
+						Create New Post
+					</button>
+				</div>
+				<div class="post new-post">
+					<div class="post__title">
+						<img src="../dist/assets/images/profile-picture.jpg" alt="User's profile picture" width="50" class="post-picture" />
+						<h2 class="post-author"></h2>
+					</div>
+					<form class="post-form">
+						<textarea name="post-body" id="post-body" cols="30" rows="5" placeholder="Write what's going on."></textarea>
+						<button type="submit" class="button-post">Post</button>
+						<button class="button-cancel">Cancel</button>
+					</form>
+				</div>
 				<div class="post">
 					<div class="post__title">
 						<img src="./assets/images/profile-picture.jpg" alt="User's profile picture" width="50" class="post-picture" />

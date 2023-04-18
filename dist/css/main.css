@@ -44,6 +44,13 @@ body {
   .main h1 {
     text-align: center;
   }
+  .heading-wrapper {
+    flex-flow: column wrap;
+    gap: 0.8rem;
+  }
+  .heading-wrapper .create-post-button {
+    width: 88%;
+  }
 }
 .bold {
   font-weight: 700;
@@ -74,6 +81,16 @@ body {
   width: 80%;
   margin-top: 3em;
   padding: 5px 15px;
+  background-color: #093b09;
+  transition: 0.2s ease-in;
+  border: none;
+  border-radius: 3px;
+}
+.main__user-data .render-new-user:hover {
+  background-color: #1a8a1a;
+}
+.main__user-data .render-new-user:active {
+  background-color: #6ce96c;
 }
 
 .bold {
@@ -84,6 +101,34 @@ body {
   grid-column: 2/5;
   font-family: "Open Sans", sans-serif;
   padding: 1.2em 2em;
+}
+.main__user-posts .heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__user-posts .create-post-button {
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #093b09;
+  border: none;
+  border-radius: 3px;
+  transition: 0.2s ease-in;
+}
+.main__user-posts .create-post-button:hover {
+  background-color: #1a8a1a;
+}
+.main__user-posts .create-post-button:active {
+  background-color: #6ce96c;
+}
+.main__user-posts .post-form {
+  font: inherit;
+}
+.main__user-posts .post-form #post-body {
+  width: 100%;
+  background-color: #929292;
+  color: #000;
+  resize: none;
 }
 .main__user-posts .post {
   margin-block: 1em;
